@@ -10,7 +10,7 @@ const getAll = (request, response) => {
           return  response.status(500).send(error)
         }else {
             return response.status(200).send({
-                menssagem: "Tudo certo",
+                mensagem: "Tudo certo",
                 contatos
             })
         }
@@ -40,7 +40,7 @@ const addContato = (request, response) => {
             return response.status(400).send(error)
         } else {
             return response.status(200).send({
-                menssagem: "POST realizado com sucesso",
+                mensagem: "POST realizado com sucesso",
                 contato
             })
         }
@@ -58,11 +58,11 @@ const getNome = (request, response) => {
         } else {
             if (contato == ""){
                 return response.status(404).send({
-                    menssagem: "Nome não encontrado!"
+                    mensagem: "Nome não encontrado!"
                 })
             } else {
                 return response.status(200).send({
-                    menssagem: "GET realizado com sucesso",
+                    mensagem: "GET realizado com sucesso",
                     contato
                 })
             }
@@ -83,7 +83,7 @@ const getById = (request, response) => {
         }else {
             if(contato ==""){
                 return response.status(404).send({
-                    menssagem: "ID não encontrado!"
+                    mensagem: "ID não encontrado!"
                 })
             } else {
                 return response.status(200).send({
@@ -122,7 +122,7 @@ const atualizaTudo = (request, response) => {
         }else {
             if(contato ==""){
                 return response.status(404).send({
-                    menssagem: "ID não encontrado!"
+                    mensagem: "ID não encontrado!"
                 })
             } else {
                 return response.status(200).send({
@@ -145,11 +145,11 @@ const atualizaTel = (request, response) => {
         }else {
             if(contato ==""){
                 return response.status(404).send({
-                    menssagem: "ID não encontrado!"
+                    mensagem: "ID não encontrado!"
                 })
             } else {
                 return response.status(200).send({
-                    menssagem: "Telefone atualizado com sucesso!",
+                    mensagem: "Telefone atualizado com sucesso!",
                     contato
                 })
             }
